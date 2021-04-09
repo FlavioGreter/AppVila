@@ -1,0 +1,6 @@
+module Pods_AppVila_AppVilaTests {
+  umbrella header "Pods-AppVila-AppVilaTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
