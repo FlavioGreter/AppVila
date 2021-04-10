@@ -76,25 +76,18 @@ const renderItem = ({item}) =>(
                 style={Estilo.imagemCurso}
             />
             <Separador/>
-            
-            
         </TouchableOpacity>
-        
-    </SafeAreaView>
-    
+    </SafeAreaView>  
 );
 
 const Lista = () => {
     return(
        
-                <FlatList
-                    data={MockList}
-                    renderItem={renderItem}
-                    keyExtractor={item => item.Id}
-                />
-                
-           
-        
+        <FlatList
+            data={MockList}
+            renderItem={renderItem}
+            keyExtractor={item => item.Id}
+        />
     );
 };
 
