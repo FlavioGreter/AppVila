@@ -7,11 +7,8 @@ import { Inicial } from './componentes/views/inicial';
 const App = () => {
 
   return (
-        
-            //<Login/>
-           <Inicial/>
-       
-      
+            <Login/>
+           //<Inicial/>  
   );
 };
 

@@ -9,20 +9,18 @@ const Cabecalho = () => {
             <SafeAreaView style={estilo.corFundo}> 
             <View style={estilo.contentTop}>
                 <Image
-                    source={require("../../../assets/vila.png")}
+                    source={require("../../assets/vila.png")}
                     style={estilo.logo}
                 />
                 <TouchableOpacity>
                     <Image
-                        source={require("../../../assets/menu.png")}
+                        source={require("../../assets/menu.png")}
                         style={estilo.menuButton}
                     />
                 </TouchableOpacity> 
             </View>
             </SafeAreaView>
-            <View style={estilo.conteinerDescricao}>
-                <View style={estilo.separador}></View>
-            </View>
+            
         </Fragment>
         
         
