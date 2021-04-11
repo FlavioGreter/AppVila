@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react';
-import {View, Text, SafeAreaView, FlatList, Image, TouchableOpacity} from 'react-native';
+import {View, Text, SafeAreaView, FlatList, Image, TouchableOpacity, Alert} from 'react-native';
 import Estilo from './estilo';
 import {Separador} from '../separador';
+import { useNavigation } from "@react-navigation/core";
 
 const MockList = [
     {
@@ -60,9 +61,53 @@ const MockList = [
     }
 ];
 
-const renderItem = ({item}) =>(
+
+clicou = () => {
+    Alert.alert("Carregando Detalhe...", "Você clicou no botão")
+}
+
+
+
+
+const Lista = () => {
+
+    const navigation = useNavigation();
     
-    <SafeAreaView>
+    const Item = ({item}) =>(
+     
+        <SafeAreaView> 
+            <TouchableOpacity onPress={() => navigation.push('Detalhe')}>
+                <View style={Estilo.contentList}>
+                    <Image 
+                        source={require('../../assets/icon-mulher.png')}
+                        style={Estilo.imagemPerfil}
+                    />
+                    <Text style={Estilo.descricao}>{item.Nome}</Text>    
+                </View>
+                <Image
+                    source={require('../../assets/icon-violao.webp')}
+                    style={Estilo.imagemCurso}
+                />
+                <Separador/>
+            </TouchableOpacity>
+        </SafeAreaView>  
+    );
+
+    
+    return(
+       
+        <FlatList
+            data={MockList}
+            renderItem={Item}
+            keyExtractor={item => item.Id}
+            
+        />
+    );
+};
+ 
+/*const Item = ({item}) =>(
+     
+    <SafeAreaView> 
         <TouchableOpacity>
             <View style={Estilo.contentList}>
                 <Image 
@@ -78,17 +123,6 @@ const renderItem = ({item}) =>(
             <Separador/>
         </TouchableOpacity>
     </SafeAreaView>  
-);
-
-const Lista = () => {
-    return(
-       
-        <FlatList
-            data={MockList}
-            renderItem={renderItem}
-            keyExtractor={item => item.Id}
-        />
-    );
-};
+);*/
 
 export default Lista;
