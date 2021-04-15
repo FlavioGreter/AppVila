@@ -5,12 +5,12 @@ const estilo = StyleSheet.create({
 
     //Estilo Separador
     conteinerDescricao: {
-        paddingHorizontal: 30
+        paddingHorizontal: 10
     },
     separador: {
-        borderWidth: 0.5,
+        borderWidth: 0.4,
         borderColor: '#A1A5AA',
-        marginTop: 5,
+        marginTop: 2,
         
     }
 })

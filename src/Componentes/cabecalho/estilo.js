@@ -1,37 +1,30 @@
 
 import { StyleSheet} from 'react-native';
+import { COR_DE_FUNDO } from '../../style/style';
 
 const estilo = StyleSheet.create({
 
     logo: {
-        width:60,
-        height:60,
-        marginBottom: 8
+        width:80,
+        height:80,
+        marginBottom: 10,
+        marginTop : 50
     },
     contentTop: {
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'space-between',
-        paddingHorizontal: 30,
+        justifyContent: 'flex-start',
+        paddingHorizontal: 15,
+        backgroundColor : COR_DE_FUNDO
     },
     menuButton: {
         width: 40,
-        height: 40
+        height: 40,
+        alignItems: 'center'
     },
-    corFundo: {
-        backgroundColor: '#2c3e50'
-    },
+   
 
-    //Estilo Separador
-    conteinerDescricao: {
-        paddingHorizontal: 30
-    },
-    separador: {
-        borderWidth: 0.5,
-        borderColor: '#A1A5AA',
-        marginTop: 2,
-        
-    }
+   
 })
 
 export default estilo;

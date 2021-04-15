@@ -4,60 +4,91 @@ import Estilo from './estilo';
 import {Separador} from '../separador';
 import { useNavigation } from "@react-navigation/core";
 
+
 const MockList = [
     {
         Id : '1',
         Nome : 'Francisco Pereira da Silva',
-        FotoPerfil : '../../assets/icon-homem.png',
+        FotoPerfil : require('../../assets/icon-homem.png'),
         Sexo : 'm'
     },
     {
         Id : '2',
         Nome : 'Ricardo Oliveira',
-        FotoPerfil : '../../assets/icon-homem.png',
+        FotoPerfil : require('../../assets/icon-homem.png'),
         Sexo : 'm'
     },
     {
         Id : '3',
         Nome : 'Luan Batista',
-        FotoPerfil : '../../assets/icon-homem.png',
+        FotoPerfil : require('../../assets/icon-homem.png'),
         Sexo : 'm'
     },
     {
         Id : '4',
-        Nome : 'Luana Ferrarini',
-        FotoPerfil : '../../assets/icon-mulher.png',
+        Nome : 'Luana Tabalaki',
+        FotoPerfil : require('../../assets/icon-mulher.png'),
         Sexo : 'f'
     },
     {
         Id : '5',
         Nome : 'Barbari Rosa',
-        FotoPerfil : '../../assets/icon-homem.png',
+        FotoPerfil : require('../../assets/icon-homem.png'),
         Sexo : 'm'
     },
     {
         Id : '6',
-        Nome : 'Dandara Batista',
-        FotoPerfil : '../../assets/icon-mulher.png',
+        Nome : 'Paulo Rogério',
+        FotoPerfil : require('../../assets/icon-homem.png'),
         Sexo : 'f'
     },
     {
         Id : '7',
         Nome : 'Poliana Daguia Ferraz',
-        FotoPerfil : '../../assets/icon-mulher.png',
+        FotoPerfil : require('../../assets/icon-mulher.png'),
         Sexo : 'f'
     },
     {
         Id : '8',
         Nome : 'Luciano Pereira Filho',
-        FotoPerfil : '../../assets/icon-homem.png',
+        FotoPerfil : require('../../assets/icon-homem.png'),
         Sexo : 'm'
     },
     {
         Id : '9',
         Nome : 'Amanda Da Costa',
-        FotoPerfil : '../../assets/icon-mulher.png',
+        FotoPerfil : require('../../assets/icon-mulher.png'),
         Sexo : 'f'
+    },
+    {
+        Id : '10',
+        Nome : 'Leonardo Silva',
+        FotoPerfil : require('../../assets/icon-homem.png'),
+        Sexo : 'm'
+    },
+    {
+        Id : '11',
+        Nome : 'Fernanda Mode',
+        FotoPerfil : require('../../assets/icon-mulher.png'),
+        Sexo : 'm'
+    },
+    {
+        Id : '12',
+        Nome : 'Karla Luizza',
+        FotoPerfil : require('../../assets/icon-mulher.png'),
+        Sexo : 'm'
+    },
+    {
+        Id : '13',
+        Nome : 'Pedro Parros',
+        FotoPerfil : require('../../assets/icon-homem.png'),
+        Sexo : 'f'
+    },
+    {
+        Id : '14',
+        Nome : 'Rosana Ferrarini',
+        FotoPerfil : require('../../assets/icon-mulher.png'),
+        Sexo : 'm'
     }
 ];
 
@@ -75,43 +106,10 @@ const Lista = () => {
     
     const Item = ({item}) =>(
      
-        <SafeAreaView> 
-            <TouchableOpacity onPress={() => navigation.push('Detalhe')}>
-                <View style={Estilo.contentList}>
-                    <Image 
-                        source={require('../../assets/icon-mulher.png')}
-                        style={Estilo.imagemPerfil}
-                    />
-                    <Text style={Estilo.descricao}>{item.Nome}</Text>    
-                </View>
-                <Image
-                    source={require('../../assets/icon-violao.webp')}
-                    style={Estilo.imagemCurso}
-                />
-                <Separador/>
-            </TouchableOpacity>
-        </SafeAreaView>  
-    );
-
-    
-    return(
-       
-        <FlatList
-            data={MockList}
-            renderItem={Item}
-            keyExtractor={item => item.Id}
-            
-        />
-    );
-};
- 
-/*const Item = ({item}) =>(
-     
-    <SafeAreaView> 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.push('Detalhe')}>
             <View style={Estilo.contentList}>
                 <Image 
-                    source={require('../../assets/icon-mulher.png')}
+                    source={item.FotoPerfil}
                     style={Estilo.imagemPerfil}
                 />
                 <Text style={Estilo.descricao}>{item.Nome}</Text>    
@@ -121,8 +119,20 @@ const Lista = () => {
                 style={Estilo.imagemCurso}
             />
             <Separador/>
-        </TouchableOpacity>
-    </SafeAreaView>  
-);*/
+        </TouchableOpacity>        
+        
+    );
+
+    
+
+    
+    return(
+        <FlatList
+        data={MockList}
+        renderItem={Item}
+        keyExtractor={item => item.Id}        
+        />  
+    );
+};
 
 export default Lista;

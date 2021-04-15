@@ -15,21 +15,23 @@ const estilo = StyleSheet.create({
     },
     input: {
       marginTop: 10,
-      width: 300,
+      width: 250,
+      height: 25,
       backgroundColor: '#fff',
       fontWeight: 'bold',
       borderRadius: 3
     },
     botao: {
-      marginTop: 10,
+      marginVertical: 10,
       width: 200,
-      height: 42,
+      height: 30,
+      borderRadius: 3,
       backgroundColor: COR_BOTOES,
       alignItems: 'center',
       justifyContent: 'center'
     },
     botaoTexto : {
-      fontSize: 16,
+      fontSize: 18,
       fontWeight: 'bold',
       color: '#fff'
     }

@@ -5,29 +5,16 @@ import estilo from './estilo';
 
 const Cabecalho = () => {
     return (
-        <Fragment>
-            <SafeAreaView style={estilo.corFundo}> 
-            <View style={estilo.contentTop}>
+        //<SafeAreaView style={estilo.corFundo}> 
+            <View style={estilo.contentTop }>
                 <Image
                     source={require("../../assets/vila.png")}
                     style={estilo.logo}
                 />
-                <TouchableOpacity>
-                    <Image
-                        source={require("../../assets/menu.png")}
-                        style={estilo.menuButton}
-                    />
-                </TouchableOpacity> 
+                
             </View>
-            </SafeAreaView>
-            
-        </Fragment>
-        
-        
+       // </SafeAreaView>  
     );
 };
-
-
-
 
 export default Cabecalho;

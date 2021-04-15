@@ -2,11 +2,11 @@ import {StyleSheet } from 'react-native';
 
 const Estilo = StyleSheet.create({
     imagemPerfil : {
-        width : 60,
-        height : 60,
+        width : 40,
+        height : 40,
         borderRadius: 30,
-        marginTop: 15,
-        marginLeft: 5
+        marginTop: 10,
+        marginLeft: 10
     },
     imagemCurso: {
         width : 20,
@@ -22,8 +22,8 @@ const Estilo = StyleSheet.create({
     },
     descricao : {
         marginLeft : 10,
-        fontSize: 15,
-        fontWeight: 'bold'
+        fontSize: 15
+        //fontWeight: ''
     }
 
 })
