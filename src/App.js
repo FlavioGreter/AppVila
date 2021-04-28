@@ -7,6 +7,7 @@ import {Inicial} from '../src/views/inicial';
 import {Detalhe} from '../src/views/detalhe';
 import {Cadastro} from '../src/views/cadastro'
 import { COR_DE_FUNDO } from "./style/style";
+import { Agenda } from "./views/agenda";
 
 const Stack = createStackNavigator();
 
@@ -40,6 +41,12 @@ const App = () => {
             name="Detalhe"
             component={Detalhe}
             options={{headerBackTitleVisible: false}}
+          />
+
+          <Stack.Screen 
+            name="Agenda"
+            component={Agenda}
+            options={{headerBackTitleVisible : false}}
           />
 
         </Stack.Navigator>

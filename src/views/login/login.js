@@ -10,6 +10,7 @@ import {Text,
         Alert} 
 from "react-native"
 import estilo from './estilo'
+import {listarPessoas} from '../../database/pessoaDb';
 
 
 const Login = () => {
@@ -40,7 +41,7 @@ const navigation = useNavigation();
       <TouchableOpacity
         style={estilo.botao}
         //onPress={() => {this.clicou()}}
-        onPress={() => navigation.push('Inicial')}
+        onPress={() => navigation.push('Inicial')}  
       >
         <Text style={estilo.botaoTexto}>Entrar</Text>
       </TouchableOpacity>

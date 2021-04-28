@@ -1,58 +1,105 @@
 import React from 'react';
+import { useState } from 'react';
 import {TextInput, Text, View, TouchableOpacity, ScrollView, Button, Alert} from 'react-native';
-import { FirebaseDB } from '../../database/firebaseDB';
 import Estilo from './estilo';
-import {Separador} from '../../componentes/separador';
+import { cadastrarPessoa } from '../../database/pessoaDb';
 
 const clicou = () =>{
-    Alert.alert("Clicou no Cadastrar");
+    Alert.alert("Clicou no botão cadastrar");
+    
 }
 
 const Cadastro = () => {
 
-//const dbRef = FirebaseDB.firestore().collection('pessoas');
+
+var [nome, setNome]         = useState('');
+var [cpf, setCpf]           = useState('');
+var [rua, setRua]           = useState('');
+var [numero, setNumero]     = useState('');
+var [bairro, setBairro]     = useState('');
+var [whatsapp, setWhatsapp] = useState('');
+var [email, setEmail]       = useState('');
+
+function  limparFormulario ()
+{
+    setNome('');
+    setCpf('');
+    setRua('');
+    setNumero('');
+    setBairro('');
+    setWhatsapp('');
+    setEmail('');
+}
+
+function msgSucesso()
+{
+    Alert.alert("Sucesso!" , "Aluno cadastrado.");
+}
+
+const pessoa = {
+    nome :      nome,
+    cpf :       cpf,
+    rua :       rua,
+    numero :    numero,
+    bairro :    bairro,
+    whatsapp :  whatsapp,
+    email :     email,
+    pessoaTipo : 'Aluno'
+  };
+
+
+  function insert(value) 
+  {
+       if(cadastrarPessoa(value))
+       {
+            msgSucesso();
+            limparFormulario();
+       } 
+  }
+
 
     return(
 
         <ScrollView>
 
-        
             <View>
                 <Text style={Estilo.descricao}> Dados Pessoais do Aluno Vila</Text>
                 <TextInput
                     placeholder={'Nome Completo'}
                     style={Estilo.input}
-                    //value={this.state.name}
-                    //onChangeText={(val) => this.inputValueUpdate(val, 'name')}
+                    value={nome}
+                    onChangeText={(value) => setNome(value)}
                 />
+            </View>
 
-                <TextInput
-                    placeholder={'Cpf'}
-                    style={Estilo.input}
-                    //value={this.state.name}
-                    //onChangeText={(val) => this.inputValueUpdate(val, 'name')}
-                />
-               
-                <Text style={Estilo.descricao}>Endereco</Text>
+            <TextInput
+                placeholder={'Cpf'}
+                style={Estilo.input}
+                value={cpf}
+                onChangeText={(value) => setCpf(value)}
+            />
+            
+
+            <Text style={Estilo.descricao}>Endereco</Text>
 
                 <TextInput
                     placeholder={'Rua ou Avenida'}
                     style={Estilo.input}
-                    //value={this.state.name}
-                    //onChangeText={(val) => this.inputValueUpdate(val, 'name')}
+                    value={rua}
+                    onChangeText={(value) => setRua(value)}
                 />
 
                 <TextInput
                     placeholder={'Número'}
                     style={Estilo.input}
-                    //value={this.state.name}
-                    //onChangeText={(val) => this.inputValueUpdate(val, 'name')}
+                    value={numero}
+                    onChangeText={(value) => setNumero(value)}
                 />
                 <TextInput
                     placeholder={'Bairro'}
                     style={Estilo.input}
-                    //value={this.state.name}
-                    //onChangeText={(val) => this.inputValueUpdate(val, 'name')}
+                    value={bairro}
+                    onChangeText={(value) => setBairro(value)}
                 />
                
                 <Text style={Estilo.descricao}>Contato</Text>
@@ -60,30 +107,29 @@ const Cadastro = () => {
                 <TextInput
                     placeholder={'Whatsapp'}
                     style={Estilo.input}
-                    //value={this.state.name}
-                    //onChangeText={(val) => this.inputValueUpdate(val, 'name')}
+                    value={whatsapp}
+                    onChangeText={(value) => setWhatsapp(value)}
                 />
 
                 <TextInput
                     placeholder={'Email'}
                     style={Estilo.input}
-                    //value={this.state.name}
-                    //onChangeText={(val) => this.inputValueUpdate(val, 'name')}
+                    value={email}
+                    onChangeText={(value) => setEmail(value)}
                 />
 
-                
-
-            </View>
-            <TouchableOpacity
-                        style={Estilo.botao}
-                        //onPress={() => {this.clicou()}}
-                        onPress={() => clicou()}
-                >
-                        <Text style={Estilo.botaoTexto}>Entrar</Text>
+                <TouchableOpacity
+                            style={Estilo.botao}
+                            //onPress={() => {this.clicou()}}
+                            onPress={() => insert(pessoa)}
+                    >
+                            <Text style={Estilo.botaoTexto}>Cadastrar</Text>
                 </TouchableOpacity>
+
         </ScrollView>
 
     );
 };
 
 export default Cadastro;
+

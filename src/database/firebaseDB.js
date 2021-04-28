@@ -1,17 +1,27 @@
-import * as firebase from 'firebase';
+//import firebase from 'firebase';
+import { Alert } from 'react-native';
+//import "firebase/firestore";
+import  {firebase} from '@react-native-firebase/database';
+import  '@react-native-firebase/firestore';
 
-const firebaseConfig = {
-    apiKey: "AIzaSyDjl6X3b_0x83vfttqxPfdgUqpXcN75xWY",
-    authDomain: "appvilanova-75062.firebaseapp.com",
-    databaseURL: "https://appvilanova-75062-default-rtdb.firebaseio.com",
-    projectId: "appvilanova-75062",
-    storageBucket: "appvilanova-75062.appspot.com",
-    messagingSenderId: "455077835349",
-    appId: "1:455077835349:web:ee4d700203369eae579adc",
-    measurementId: "G-6XH35PE79V"
+
+var firebaseConfig = {
+  apiKey: "AIzaSyDK1zd5PRyjcX5kwft7Bh58BIjB68DUzqQ",
+  authDomain: "app-vila-nova.firebaseapp.com",
+  projectId: "app-vila-nova",
+  storageBucket: "app-vila-nova.appspot.com",
+  messagingSenderId: "16037217",
+  appId: "1:16037217:web:1d8eab63ae76c79420c120",
+  measurementId: "G-15WR21JQ86"
 };
+// Initialize Firebase
 
-firebase.firebaseConfig(firebaseConfig);
-firebase.firestore();
 
-export default FirebaseDB;
+firebase.initializeApp(firebaseConfig);
+var firestoreDb = firebase.firestore();
+
+
+//const pessoaFirebase = firebase.initializeApp(firebaseConfig);
+//Alert.alert('pessoaFirebase' , pessoaFirebase);
+ 
+  export default firestoreDb

@@ -13,7 +13,7 @@ const Estilo = StyleSheet.create({
       marginRight: 8,
       marginLeft: 8,
       //width: tamanhoDaTela,
-      height: 25,
+      height: 40,
       backgroundColor: '#fff',
       fontWeight: 'bold',
       borderRadius: 3,

@@ -1,72 +1,54 @@
-import React from 'react';
-import {View , Image, Alert} from 'react-native';
+import React, { Component, useState } from 'react';
+import {View , Image, Alert, Text} from 'react-native';
 import Estilo from './estilo';
-import { FloatingAction } from "react-native-floating-action";
+import { Tab} from 'react-native-elements'
 import { COR_BOTOES, COR_DE_FUNDO } from '../../style/style';
 import { useNavigation } from '@react-navigation/core';
-
-
-const actions = [
-    {
-        text: "Cadastrar",
-        icon: require("../../assets/vila.png"),
-        name: "Cadastro",
-        position: 1,
-        color : COR_BOTOES,
-        buttonSize: 40,
-        margin: 8
-      },
-      {
-        text: "Sair",
-        icon: require("../../assets/vila.png"),
-        name: "Login",
-        position: 2,
-        color :"red",
-        buttonSize: 40,
-        margin : 8
-      },
-    /*
-    
-    
-    {
-      text: "Location",
-      icon: require("../../assets/menu.png"),
-      name: "bt_room",
-      position: 3
-    },
-    {
-      text: "Video",
-      icon: require("../../assets/menu.png"),
-      name: "bt_videocam",
-      position: 4
-    }*/
-  ];
-
+import { FAB, Portal, Provider } from 'react-native-paper';
 
 
 const BotaoFlutuanteAdicionar = () => {
 
     const navigation = useNavigation();
+    const [state, setState] = React.useState({ open: false });
+
+    const onStateChange = ({ open }) => setState({ open });
+  
+    const { open } = state;
     return(
-       // <Text style={Estilo.botaoAdicionar}>ADICIONAR ALUNOS</Text>
-
-        <View>
-            
-            <FloatingAction 
-                actions={actions}
-                onPressItem={name => {navigation.push(`${name}`)
-                //console.log(`selected button: ${name}`);
-                //Alert.alert(`Select button : ${name}`);
-                }}
-                color={COR_DE_FUNDO}
-                
-                
-                
-                
-            />
-        </View>
-
+      
+      <Provider>
+        <Portal>
+          <FAB.Group   
+            open={open}
+            icon={open ? 'calendar-today' : 'plus'}
+            actions={[
+              { icon: 'plus', 
+              label: 'Cadastrar',
+                onPress: () => navigation.push('Cadastro') },
+              {
+                icon: 'star',
+                label: 'Agenda',
+                onPress: () => navigation.push('Agenda'),
+              },
+              {
+                icon: '',
+                label: 'Sair',
+                onPress: () => navigation.push('Login'),
+              }
+            ]}
+            fabStyle={Estilo.botaoAdicionar}
+            onStateChange={onStateChange}
+            onPress={() => {
+              if (open) {
+                // do something if the speed dial is open
+              }
+            }}
+          />
+        </Portal>
+    </Provider>
     );
+    
 };
 
 export default BotaoFlutuanteAdicionar;

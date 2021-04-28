@@ -8,7 +8,7 @@ const estilo = StyleSheet.create({
         width:80,
         height:80,
         marginBottom: 10,
-        marginTop : 50
+        marginTop : 8
     },
     contentTop: {
         flexDirection: 'row',

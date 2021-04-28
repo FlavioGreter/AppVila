@@ -1,6 +1,0 @@
-module Pods_AppVila {
-  umbrella header "Pods-AppVila-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -18,11 +18,11 @@
 13-->[com.facebook.flipper:flipper:0.75.1] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/a8f6015f96666ab8d93bfe5b64998bc8/jetified-flipper-0.75.1/AndroidManifest.xml:16:5-76
 13-->[com.facebook.flipper:flipper:0.75.1] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/a8f6015f96666ab8d93bfe5b64998bc8/jetified-flipper-0.75.1/AndroidManifest.xml:16:22-73
 14    <uses-permission android:name="android.permission.WAKE_LOCK" />
-14-->[:react-native-firebase] /Users/flaviogretter/Documents/_projetos/AppVila/node_modules/react-native-firebase/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-68
-14-->[:react-native-firebase] /Users/flaviogretter/Documents/_projetos/AppVila/node_modules/react-native-firebase/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:22-65
+14-->[:react-native-firebase_database] /Users/flaviogretter/Documents/_projetos/AppVila/node_modules/@react-native-firebase/database/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-68
+14-->[:react-native-firebase_database] /Users/flaviogretter/Documents/_projetos/AppVila/node_modules/@react-native-firebase/database/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:22-65
 15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-15-->[:react-native-firebase] /Users/flaviogretter/Documents/_projetos/AppVila/node_modules/react-native-firebase/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-79
-15-->[:react-native-firebase] /Users/flaviogretter/Documents/_projetos/AppVila/node_modules/react-native-firebase/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:22-76
+15-->[:react-native-firebase_database] /Users/flaviogretter/Documents/_projetos/AppVila/node_modules/@react-native-firebase/database/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-79
+15-->[:react-native-firebase_database] /Users/flaviogretter/Documents/_projetos/AppVila/node_modules/@react-native-firebase/database/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:22-76
 16
 17    <application
 17-->/Users/flaviogretter/Documents/_projetos/AppVila/android/app/src/main/AndroidManifest.xml:6:5-24:19
@@ -70,16 +70,91 @@
 38            </intent-filter>
 39        </activity>
 40
-41        <service android:name="com.google.firebase.components.ComponentDiscoveryService" >
-41-->[:react-native-firebase] /Users/flaviogretter/Documents/_projetos/AppVila/node_modules/react-native-firebase/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:9-20:19
-41-->[:react-native-firebase] /Users/flaviogretter/Documents/_projetos/AppVila/node_modules/react-native-firebase/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:18-89
-42            <meta-data
-42-->[:react-native-firebase] /Users/flaviogretter/Documents/_projetos/AppVila/node_modules/react-native-firebase/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-19:85
-43                android:name="com.google.firebase.components:io.invertase.firebase.ReactNativeFirebaseAppRegistrar"
-43-->[:react-native-firebase] /Users/flaviogretter/Documents/_projetos/AppVila/node_modules/react-native-firebase/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-116
-44                android:value="com.google.firebase.components.ComponentRegistrar" />
-44-->[:react-native-firebase] /Users/flaviogretter/Documents/_projetos/AppVila/node_modules/react-native-firebase/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:17-82
-45        </service>
-46    </application>
-47
-48</manifest>
+41        <service
+41-->[com.google.firebase:firebase-firestore:22.1.2] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/44f3144a51164ef542cd407857f6b87b/jetified-firebase-firestore-22.1.2/AndroidManifest.xml:17:9-23:19
+42            android:name="com.google.firebase.components.ComponentDiscoveryService"
+42-->[com.google.firebase:firebase-firestore:22.1.2] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/44f3144a51164ef542cd407857f6b87b/jetified-firebase-firestore-22.1.2/AndroidManifest.xml:18:13-84
+43            android:directBootAware="true"
+43-->[com.google.firebase:firebase-common:19.5.0] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/9b258e193410108b7e93b8ca3356a6a1/jetified-firebase-common-19.5.0/AndroidManifest.xml:35:13-43
+44            android:exported="false" >
+44-->[com.google.firebase:firebase-firestore:22.1.2] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/44f3144a51164ef542cd407857f6b87b/jetified-firebase-firestore-22.1.2/AndroidManifest.xml:19:13-37
+45            <meta-data
+45-->[com.google.firebase:firebase-firestore:22.1.2] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/44f3144a51164ef542cd407857f6b87b/jetified-firebase-firestore-22.1.2/AndroidManifest.xml:20:13-22:85
+46                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+46-->[com.google.firebase:firebase-firestore:22.1.2] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/44f3144a51164ef542cd407857f6b87b/jetified-firebase-firestore-22.1.2/AndroidManifest.xml:21:17-111
+47                android:value="com.google.firebase.components.ComponentRegistrar" />
+47-->[com.google.firebase:firebase-firestore:22.1.2] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/44f3144a51164ef542cd407857f6b87b/jetified-firebase-firestore-22.1.2/AndroidManifest.xml:22:17-82
+48            <meta-data
+48-->[com.google.firebase:firebase-database:19.7.0] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/d650e619063556546a0c90bc035c9857/jetified-firebase-database-19.7.0/AndroidManifest.xml:32:13-34:85
+49                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+49-->[com.google.firebase:firebase-database:19.7.0] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/d650e619063556546a0c90bc035c9857/jetified-firebase-database-19.7.0/AndroidManifest.xml:33:17-109
+50                android:value="com.google.firebase.components.ComponentRegistrar" />
+50-->[com.google.firebase:firebase-database:19.7.0] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/d650e619063556546a0c90bc035c9857/jetified-firebase-database-19.7.0/AndroidManifest.xml:34:17-82
+51            <!--
+52                This registrar is not defined in the dynamic-module-support sdk itself to allow non-firebase
+53                clients to use it as well, by defining this registrar in their own core/common library.
+54            -->
+55            <meta-data
+55-->[com.google.firebase:firebase-common:19.5.0] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/9b258e193410108b7e93b8ca3356a6a1/jetified-firebase-common-19.5.0/AndroidManifest.xml:43:13-45:85
+56                android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
+56-->[com.google.firebase:firebase-common:19.5.0] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/9b258e193410108b7e93b8ca3356a6a1/jetified-firebase-common-19.5.0/AndroidManifest.xml:44:17-121
+57                android:value="com.google.firebase.components.ComponentRegistrar" />
+57-->[com.google.firebase:firebase-common:19.5.0] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/9b258e193410108b7e93b8ca3356a6a1/jetified-firebase-common-19.5.0/AndroidManifest.xml:45:17-82
+58        </service>
+59
+60        <activity
+60-->[com.google.android.gms:play-services-auth:19.0.0] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/ea912e20742f2460d09d892ff051668e/jetified-play-services-auth-19.0.0/AndroidManifest.xml:23:9-27:75
+61            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+61-->[com.google.android.gms:play-services-auth:19.0.0] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/ea912e20742f2460d09d892ff051668e/jetified-play-services-auth-19.0.0/AndroidManifest.xml:24:13-93
+62            android:excludeFromRecents="true"
+62-->[com.google.android.gms:play-services-auth:19.0.0] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/ea912e20742f2460d09d892ff051668e/jetified-play-services-auth-19.0.0/AndroidManifest.xml:25:13-46
+63            android:exported="false"
+63-->[com.google.android.gms:play-services-auth:19.0.0] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/ea912e20742f2460d09d892ff051668e/jetified-play-services-auth-19.0.0/AndroidManifest.xml:26:13-37
+64            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+64-->[com.google.android.gms:play-services-auth:19.0.0] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/ea912e20742f2460d09d892ff051668e/jetified-play-services-auth-19.0.0/AndroidManifest.xml:27:13-72
+65        <!--
+66            Service handling Google Sign-In user revocation. For apps that do not integrate with
+67            Google Sign-In, this service will never be started.
+68        -->
+69        <service
+69-->[com.google.android.gms:play-services-auth:19.0.0] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/ea912e20742f2460d09d892ff051668e/jetified-play-services-auth-19.0.0/AndroidManifest.xml:33:9-37:51
+70            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+70-->[com.google.android.gms:play-services-auth:19.0.0] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/ea912e20742f2460d09d892ff051668e/jetified-play-services-auth-19.0.0/AndroidManifest.xml:34:13-89
+71            android:exported="true"
+71-->[com.google.android.gms:play-services-auth:19.0.0] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/ea912e20742f2460d09d892ff051668e/jetified-play-services-auth-19.0.0/AndroidManifest.xml:35:13-36
+72            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+72-->[com.google.android.gms:play-services-auth:19.0.0] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/ea912e20742f2460d09d892ff051668e/jetified-play-services-auth-19.0.0/AndroidManifest.xml:36:13-107
+73            android:visibleToInstantApps="true" />
+73-->[com.google.android.gms:play-services-auth:19.0.0] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/ea912e20742f2460d09d892ff051668e/jetified-play-services-auth-19.0.0/AndroidManifest.xml:37:13-48
+74
+75        <activity
+75-->[com.google.android.gms:play-services-base:17.1.0] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/1f618c7c787acbb298d293db07456f99/jetified-play-services-base-17.1.0/AndroidManifest.xml:23:9-26:75
+76            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+76-->[com.google.android.gms:play-services-base:17.1.0] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/1f618c7c787acbb298d293db07456f99/jetified-play-services-base-17.1.0/AndroidManifest.xml:24:13-79
+77            android:exported="false"
+77-->[com.google.android.gms:play-services-base:17.1.0] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/1f618c7c787acbb298d293db07456f99/jetified-play-services-base-17.1.0/AndroidManifest.xml:25:13-37
+78            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+78-->[com.google.android.gms:play-services-base:17.1.0] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/1f618c7c787acbb298d293db07456f99/jetified-play-services-base-17.1.0/AndroidManifest.xml:26:13-72
+79
+80        <provider
+80-->[com.google.firebase:firebase-common:19.5.0] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/9b258e193410108b7e93b8ca3356a6a1/jetified-firebase-common-19.5.0/AndroidManifest.xml:26:9-31:39
+81            android:name="com.google.firebase.provider.FirebaseInitProvider"
+81-->[com.google.firebase:firebase-common:19.5.0] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/9b258e193410108b7e93b8ca3356a6a1/jetified-firebase-common-19.5.0/AndroidManifest.xml:27:13-77
+82            android:authorities="com.appvila.firebaseinitprovider"
+82-->[com.google.firebase:firebase-common:19.5.0] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/9b258e193410108b7e93b8ca3356a6a1/jetified-firebase-common-19.5.0/AndroidManifest.xml:28:13-72
+83            android:directBootAware="true"
+83-->[com.google.firebase:firebase-common:19.5.0] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/9b258e193410108b7e93b8ca3356a6a1/jetified-firebase-common-19.5.0/AndroidManifest.xml:29:13-43
+84            android:exported="false"
+84-->[com.google.firebase:firebase-common:19.5.0] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/9b258e193410108b7e93b8ca3356a6a1/jetified-firebase-common-19.5.0/AndroidManifest.xml:30:13-37
+85            android:initOrder="100" />
+85-->[com.google.firebase:firebase-common:19.5.0] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/9b258e193410108b7e93b8ca3356a6a1/jetified-firebase-common-19.5.0/AndroidManifest.xml:31:13-36
+86
+87        <meta-data
+87-->[com.google.android.gms:play-services-basement:17.1.1] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/33ed235d93b40f115c7a2d6ecf888008/jetified-play-services-basement-17.1.1/AndroidManifest.xml:23:9-25:69
+88            android:name="com.google.android.gms.version"
+88-->[com.google.android.gms:play-services-basement:17.1.1] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/33ed235d93b40f115c7a2d6ecf888008/jetified-play-services-basement-17.1.1/AndroidManifest.xml:24:13-58
+89            android:value="@integer/google_play_services_version" />
+89-->[com.google.android.gms:play-services-basement:17.1.1] /Users/flaviogretter/.gradle/caches/transforms-2/files-2.1/33ed235d93b40f115c7a2d6ecf888008/jetified-play-services-basement-17.1.1/AndroidManifest.xml:25:13-66
+90    </application>
+91
+92</manifest>

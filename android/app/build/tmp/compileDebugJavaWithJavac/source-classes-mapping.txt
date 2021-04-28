@@ -1,0 +1,14 @@
+com/appvila/ReactNativeFlipper.java
+ com.appvila.ReactNativeFlipper
+ com.appvila.ReactNativeFlipper$1
+ com.appvila.ReactNativeFlipper$2
+ com.appvila.ReactNativeFlipper$2$1
+com/appvila/MainApplication.java
+ com.appvila.MainApplication
+ com.appvila.MainApplication$1
+com/appvila/MainActivity.java
+ com.appvila.MainActivity
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList
+com/appvila/BuildConfig.java
+ com.appvila.BuildConfig
