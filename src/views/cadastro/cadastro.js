@@ -10,8 +10,21 @@ const clicou = () =>{
 }
 
 const Cadastro = () => {
+/*
+const [state, setState] = useState({
+    nome: "",
+    cpf: "",
+    rua: "",
+    numero: "",
+    bairro: "",
+    whatsapp: "",
+    email: ""
+});
 
-
+const handlerChahgeText = (chave, valor) =>{
+    setState({ ...state, chave: valor})
+}
+*/
 var [nome, setNome]         = useState('');
 var [cpf, setCpf]           = useState('');
 var [rua, setRua]           = useState('');
@@ -68,6 +81,7 @@ const pessoa = {
                     placeholder={'Nome Completo'}
                     style={Estilo.input}
                     value={nome}
+                    //onChangeText={(value) => handlerChahgeText('nome', value)}
                     onChangeText={(value) => setNome(value)}
                 />
             </View>

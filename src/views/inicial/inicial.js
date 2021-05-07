@@ -6,6 +6,7 @@ import Lista from '../../componentes/lista/lista';
 import {listarPessoas} from '../../database/pessoaDb';
 
 
+
 const MockList = [
     {
         Id : '1',
@@ -99,7 +100,7 @@ const Inicial = () => {
     return (  
         <>
             <Cabecalho/>
-            <Lista lista={MockList}/>
+            <Lista lista={listarPessoas}/>
             <BotaoFlutuanteAdicionar/> 
             
         </>

@@ -7,6 +7,7 @@ import { ListItem, Avatar } from 'react-native-elements'
 
 
 
+
 clicou = () => {
     Alert.alert("Carregando Detalhe...", "Você clicou no botão")
 }
@@ -20,7 +21,7 @@ const Lista = ({lista}) => {
             <ListItem bottomDivider> 
                 <Avatar source={item.FotoPerfil} />
                 <ListItem.Content>
-                <ListItem.Title>{item.Nome}</ListItem.Title>
+                <ListItem.Title>{item.nome}</ListItem.Title>
                 <ListItem.Subtitle>
                     <View>
                         <Text>

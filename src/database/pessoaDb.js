@@ -1,7 +1,10 @@
 import { Alert } from "react-native";
-import {firestoreDb} from './firebaseDb';
+import firestore from '@react-native-firebase/firestore';
 
-export function cadastrarPessoa(pessoa)
+
+
+
+export async function cadastrarPessoa(pessoa)
 {
     if(pessoa.nome === '')
     {
@@ -9,30 +12,19 @@ export function cadastrarPessoa(pessoa)
     } 
     else 
     {   
-        Alert.alert('Pessoa : ', pessoa.nome)
+        
        try
-        {
-            
-            firestoreDb.collection("users").add({
-                first: "Alan",
-                middle: "Mathison",
-                last: "Turing",
-                born: 1912
-            })
-            .then((docRef) => {
-                console.log("Document written with ID: ", docRef.id);
-            })
-            .catch((error) => {
-                console.error("Error adding document: ", error);
-            });
-            
-            
+        {   
+            await firestore().collection('pessoas').add({pessoa})
+            .then(() => {
+                return true;
+            })       
         }
         catch(exception)
         {
             Alert.alert("Ops! Algo aconteceu", exception.message);
         }  
-        return true;
+        return false;
     }
 }
 
@@ -40,9 +32,10 @@ export async function listarPessoas()
 {
     
     try
-    {   /*
+    {   
+        
         var lista = []
-        const snapshot = await pessoaFirebase.get('pessoas/')
+        const snapshot = await firestore().collection('pessoas').get()
         const pessoas = snapshot.docs.map(doc => doc.data())
 
         
@@ -60,8 +53,8 @@ export async function listarPessoas()
         }
         //Alert.alert('TESTE' , lista[3].nome)
         return(JSON.stringify(lista));
-        */
-       return [];
+        
+      // return [];
     }
     catch(exception)
     {

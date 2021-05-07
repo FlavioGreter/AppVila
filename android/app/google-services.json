@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1010109435103",
+    "project_id": "appvila",
+    "storage_bucket": "appvila.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010109435103:android:7d58c527a8fc0a7a346d6a",
+        "android_client_info": {
+          "package_name": "com.appvila"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1010109435103-8j5tgl0qsvcjugf01d6mdf4mdrtirm8s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQh-arjMgdDfCSldTeowBfquEu37uIPR4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1010109435103-8j5tgl0qsvcjugf01d6mdf4mdrtirm8s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
